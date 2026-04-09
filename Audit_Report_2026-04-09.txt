@@ -1,8 +1,9 @@
 --- Network Device Audit Report ---
 
 Device: router1
-- Error connecting to device: timed out
+IP Address: 192.168.1.10
+- ERROR: timed out
 
 Device: router2
-- Error connecting to device: timed out
-
+IP Address: 192.168.1.11
+- ERROR: timed out

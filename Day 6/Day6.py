@@ -1,5 +1,6 @@
 from netmiko import ConnectHandler
-from netmiko.ssh_exception import NetmikoTimeoutException, NetmikoAuthenticationException
+from netmiko.exceptions import NetMikoTimeoutException
+from netmiko.exceptions import NetMikoAuthenticationException
 import datetime
 import os
 
@@ -76,7 +77,7 @@ for device in devices:
 
         print(f"Configuration backup for {hostname} saved to {filepath} successfully.")
 
-    except (NetmikoTimeoutException, NetmikoAuthenticationException) as e:
+    except (NetMikoTimeoutException, NetMikoAuthenticationException) as e:
         print(f"Error backing up configuration for {ip}: {str(e)}")
 
     except Exception as e:
